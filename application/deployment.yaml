@@ -1,0 +1,29 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafkaprojectnet
+  namespace: default
+  labels:
+    app: kafkaprojectnet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafkaprojectnet
+  template:
+    metadata:
+      labels:
+        app: kafkaprojectnet
+    spec:
+      containers:
+        - name: kafkaprojectnet
+          image: ghcr.io/anouar-fs/kafkaprojectnet:sha-0cfdc62
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_HTTP_PORTS
+              value: "8080"

@@ -1,0 +1,17 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafkaprojectnet
+  namespace: default
+  labels:
+    app: kafkaprojectnet
+spec:
+  type: ClusterIP
+  selector:
+    app: kafkaprojectnet
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: http
