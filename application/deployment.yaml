@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: kafkaprojectnet
-          image: ghcr.io/anouar-fs/kafkaprojectnet:sha-da0bce6
+          image: ghcr.io/anouar-fs/kafkaprojectnet:sha-6d83c47
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
