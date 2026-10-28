@@ -5,11 +5,11 @@ metadata:
   labels:
     app: kafkaprojectnet
 spec:
-  type: NodePort
+  type: ClusterIp
   selector:
     app: kafkaprojectnet
   ports:
     - name: http
       protocol: TCP
-      port: 80
-      targetPort: http
+      port: 9090
+      targetPort: 8080
