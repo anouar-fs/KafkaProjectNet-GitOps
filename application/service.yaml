@@ -5,7 +5,7 @@ metadata:
   labels:
     app: kafkaprojectnet
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: kafkaprojectnet
   ports:
