@@ -5,7 +5,7 @@ metadata:
   labels:
     app: kafkaprojectnet
 spec:
-  type: ClusterIp
+  type: ClusterIP
   selector:
     app: kafkaprojectnet
   ports:
